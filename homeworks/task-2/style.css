@@ -254,7 +254,13 @@ footer p {
 
 	.navigation {
 		margin-top: 20px;
+	}
 
+	.inner {
+  	flex-basis: 100%;
+	}
+	.outer .inner:nth-of-type(n + 2) {
+		margin-top: 20px;
 	}
 
 
