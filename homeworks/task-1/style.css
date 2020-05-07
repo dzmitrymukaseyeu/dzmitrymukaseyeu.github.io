@@ -1,7 +1,3 @@
-html, body {
- padding: 0;
- margin: 0; 
-}
 
 header {
   padding: 35px 0;
@@ -54,47 +50,68 @@ h1 {
 .section2 ul  {
 	border: 1px solid #000;
   box-shadow: 0 0 15px;
-  padding-left: 20px;
+  padding: 20px 0 20px 20px;
   color: #663399;
   text-shadow: 1px 2px 15px #000;
 }
 
 
 .section2 li {
- margin: 16px ;
+ display: block;
 }
+
+.section2 li + li {
+ margin-top: 16px;
+}
+
 
 ._black {
   color: #000;
 }
 
+
 .images {
-  margin-top: 20px;
+	font-size: 0;
+	margin: 0 -10px;
+	margin-top: 30px;
 }
 
 
-.images figure + figure {
- margin-left: 20px;
-
+.images_inner {
+ display: inline-block;
+ width: 33.3333%;
+ padding: 0 10px;
 }
+
+.figure_img {
+ position: relative;
+}
+
+.figure_img::after {
+ content: '';
+ display: block;
+ padding-top: 50%;
+}
+
+.figure_img img {
+ width: 100%;
+ height: 100%;
+ position: absolute;
+ top: 0;
+ left: 0;
+ object-fit: cover;
+}
+
 
 figure {
-  display: inline-block;
   border: 1px solid #000;
-  padding: : 20px 5px 20px 0px;
-}
-
-img {
-  width: 300px; 
-  height: 170px; 
-  border: none;
 }
 
 figcaption {
+	font-size: 16px;
 	text-align: center;
 	padding: 10px;
-  text-shadow: 1px 1px 2px #ba66f1 ;
-  
+	text-shadow: 1px 1px 2px #ba66f1 ; 
 }
 
 
@@ -109,3 +126,28 @@ p {
   color: #fff;
   margin: 0px;
 }
+
+@media screen and (max-width: 992px) {
+	 .images_inner {
+		 width: 50%;
+		}
+
+
+		.images_inner:nth-child(n + 3) {
+			margin-top: 30px;
+		}
+
+
+}
+
+
+@media screen and (max-width: 740px) {
+	 .images_inner {
+		 width: 100%;
+		}
+		.images_inner:nth-child(n + 2) {
+			margin-top: 30px;
+		}
+}
+
+
