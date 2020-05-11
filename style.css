@@ -1,7 +1,10 @@
 body {
 	font-family: Open Sans, sans-serif;
 	font-weight: 400;
-	background-color: #33b175;
+  background-image: url(https://c.wallhere.com/photos/d9/b0/digital_art_dark_lines-102550.png!d);
+  background-size: 100%;
+  background-color:#1e1e1e;
+
 }
 
 .l-homeworks {
@@ -26,8 +29,16 @@ body {
 	width: 100%;
   padding: 10px;
   background-color: #fff;
-  border: 5px solid #18a093;
+  border: 5px solid #A9A9A9;
   border-radius: 3px;
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
-  color: #6a6a6a;
+  color: #A9A9A9;
+  transition: transform .2s ease-out;
+}
+
+.l-homeworks__link:hover {
+  transform: scale(1.1);
+  border: 5px solid #2F4F4F;
+  color: #2F4F4F;
+
 }
