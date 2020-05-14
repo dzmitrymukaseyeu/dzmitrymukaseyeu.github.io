@@ -1,6 +1,5 @@
 * {
 	font-family: sans-serif;
-	overflow-x: hidden;
 }
 
 .clearfix::after {
@@ -12,6 +11,10 @@
 header {
 	background: #1b1b1b;
 	border-bottom: 2px solid #393839;
+}
+
+button {
+	display: none;
 }
 
 .conteiner {
@@ -27,6 +30,7 @@ header {
 .head {
   font-size: 0;
   padding: 20px 20px;
+  
 }
 
 .head nav, .head img {
@@ -248,12 +252,39 @@ footer p {
 
 @media screen and (max-width: 740px) {
 
-	.navigation li+li {
-	margin-left: 45px;
+	.head {
+		position: relative;
 	}
 
-	.navigation {
+button {
+	display: block;
+	width: 30px;
+	height: 30px;
+	margin-top: 20px;
+}
+
+button img {
+	fill: #fff;
+}
+
+._menu__hidden {
+	display: none;
+}
+
+
+	.navigation li+li {
+		margin-left: 0;
+		margin-top: 5px;
+	}
+
+	.navigation  {
 		margin-top: 20px;
+		position: absolute;
+	}
+
+	.navigation li {
+		display: block;
+		text-align: left;
 	}
 
 	.inner {
