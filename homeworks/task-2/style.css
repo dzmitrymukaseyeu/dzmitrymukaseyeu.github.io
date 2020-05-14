@@ -17,6 +17,17 @@ button {
 	display: none;
 }
 
+.nav__menu span {
+	display: block;
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+}
+
+.nav__menu span:nth-of-type(n+1) {
+	margin-top: 4px;
+}
+
 .conteiner {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -67,7 +78,7 @@ button {
 .link:hover {
 	color: #528a6b;
 	border-bottom: 1px solid #528a6b;
-	padding-bottom: 5px;
+	padding-bottom: 2px;
 }
 
 .link {
@@ -263,24 +274,25 @@ button {
 	margin-top: 20px;
 }
 
-button img {
-	fill: #fff;
+.link:hover {
+	padding-bottom: 1px;
 }
-
-._menu__hidden {
-	display: none;
-}
-
 
 	.navigation li+li {
 		margin-left: 0;
-		margin-top: 5px;
+		margin-top: 10px;
 	}
 
 	.navigation  {
 		margin-top: 20px;
 		position: absolute;
+		display: none;
 	}
+
+	._menu__hidden {
+	position: static;
+	display: block;
+}
 
 	.navigation li {
 		display: block;
