@@ -28,16 +28,65 @@ body {
 	width: 100%;
   padding: 10px;
   background-color: #fff;
-  border: 5px solid #A9A9A9;
+  border: 0;
   border-radius: 3px;
   box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.3);
   color: #A9A9A9;
-  transition: transform .2s ease-out;
+  position: relative;
+  transition: color .2s .8s ease-out;
 }
 
 .l-homeworks__link:hover {
-  transform: scale(1.1);
-  border: 5px solid #2F4F4F;
-  color: #2F4F4F;
+    color: #ff9800;
+    transition: color .2s .8s ease-out;
+}
 
+.l-homeworks__link::before{
+  content: '';
+  width: 0;
+  height: 0;
+  border: 3px solid  #ff9800; 
+  border-width: 3px 0 0 3px;
+  border-radius: 3px;
+  position: absolute; 
+  left: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: height .2s .6s ease-out,
+              width .2s .4s ease-out,
+              opacity .2s .6s ease-out;
+}
+
+.l-homeworks__link:hover::before {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: height .2s ease-out,
+              width .2s .2s ease-out,
+              opacity .2s ease-out;
+}
+
+.l-homeworks__link::after{
+  content: '';
+  width: 0;
+  height: 0;
+  border: 3px solid #ff9800; 
+  border-width: 0 3px 3px 0;
+  border-radius: 3px;
+  position: absolute; 
+  right: 0;
+  top: 0;
+  opacity: 0;
+  transition: height .2s .2s ease-out,
+              width .2s  ease-out,
+              opacity .2s .2s ease-out;
+}
+
+.l-homeworks__link:hover::after {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: height .2s .4s ease-out,
+              width .2s .6s ease-out,
+              opacity .2s .4s ease-out;
 }
