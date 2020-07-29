@@ -102,11 +102,11 @@ body {
 @media screen and (max-width: 992px) {
 
 	.logo img:nth-child(2) {
-	width: 115px;
-	height: 115px;
-	bottom: 0;
-	top:0;
-	margin: auto;
+		width: 115px;
+		height: 115px;
+		bottom: 0;
+		top:0;
+		margin: auto;
 	}
 
 	.person:nth-child(n+1) {
@@ -119,17 +119,25 @@ body {
 
 @media screen and (max-width: 740px) {
 
+	.conteiner {
+		padding: 0 15px;
+	}
+
 	.inner {
-	flex-basis: 100%;
+		flex-basis: 100%;
+	}
+
+	.inner:nth-child(n+2) {
+		margin-top: 50px;
 	}
 
 	.logo img:nth-child(2) {
-	width: 200px;
-	height: 200px;
-	border: 2px solid #fff;
-	bottom: 0;
-	top:0;
-	margin: auto;
+		width: 200px;
+		height: 200px;
+		border: 2px solid #fff;
+		bottom: 0;
+		top:0;
+		margin: auto;
 	}
 
 	.person:nth-child(n+1) {

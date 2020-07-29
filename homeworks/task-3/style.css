@@ -9,6 +9,7 @@ body {
 .conteiner {
 	max-width: 1240px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 
@@ -43,14 +44,14 @@ body {
 
 .section1 h1::after {
 	content: "";
-  position: absolute;
-  bottom: 0;
+  	position: absolute;
+  	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-  width: 60px;
-  height: 3px;
-  background-color: #ffc77b;
+ 	width: 60px;
+  	height: 3px;
+  	background-color: #ffc77b;
 }
 
 
@@ -75,6 +76,7 @@ body {
 .outer_item {
 	width: 25%;
 	padding: 0 10px;
+
 }
 
 .outer_item_inner img {
@@ -91,51 +93,12 @@ body {
 	height: 100%;
 	text-align: center;
 	padding: 60px 5px;
-	top:0;
-	z-index: -1;
+	top: 0;
 	background-color: #232323;
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity .2s ease-out;
 }
-
-.circle {
-	position: relative;
-  border: 2px solid #f7a642;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  top: 10px;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
- }
-
-
-.circle::after {
-	content: "";
-	height: 2px;
-	width: 25px;
-	background: #f7a642;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-}
-
-
-.circle::before {
-	content: "";
-  height: 25px;
-  width: 2px;
-  background: #f7a642;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-}
-
 
 .outer_item_shadow h3 {
 	text-transform: uppercase;
@@ -154,8 +117,51 @@ body {
 
 
 .outer_item:hover .outer_item_shadow {
-	z-index: auto;
+	pointer-events: auto;
+	cursor: pointer;
+	opacity: 1;
 }
+
+.circle {
+	position: relative;
+	border: 2px solid #f7a642;
+	border-radius: 50%;
+	height: 50px;
+	width: 50px;
+	top: 10px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+}
+
+
+.circle::after, .circle::before  {
+	content: "";
+	height: 2px;
+	width: 25px;
+	background: #f7a642;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	transform: rotate(90deg);
+	transition: transform 0.3s ease-out;
+}
+
+.circle::after {
+	transform: rotate(0deg);
+	transition: transform 0.3s ease-out;
+}
+
+.circle:hover::before,
+.circle:hover:hover::after {
+	transform: rotate(180deg);
+	background: #f7a642; 
+}
+
+
 
 
 .layer_outer {
@@ -198,7 +204,7 @@ body {
 
 .layer_inner:hover .layer_inner_shadow {
 	z-index: auto;
-
+	cursor: pointer;
 }
 
 
@@ -218,6 +224,11 @@ body {
 
 @media screen and (max-width: 740px) {
 
+	.conteiner {
+		padding: 0 15px;
+	}
+	
+
 	.outer_item {
 		width: 100%;
 	}
@@ -234,8 +245,7 @@ body {
 		margin-top: 40px;
 	}
 
-.layer_inner_item {
-	max-width: none;
-
-}	
-
+	.layer_inner_item {
+		max-width: none;
+		}	
+}

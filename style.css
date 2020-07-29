@@ -24,6 +24,16 @@ body {
 	margin-top: 30px;
 }
 
+.l-homeworks__item:nth-child(n+5) .l-homeworks__link {
+  color: #A9A9A9;
+  background-color: #9A1946 ;
+  text-align: center;
+}
+
+.l-homeworks__item:hover:nth-child(n+5) .l-homeworks__link {
+  color: #fff;
+}
+
 .l-homeworks__link {
 	width: 100%;
   padding: 10px;
@@ -34,12 +44,15 @@ body {
   color: #A9A9A9;
   position: relative;
   transition: color .1s ease-out,
-              transform .2s ease-out;
+  transform .2s ease-out;
 }
+
+
+
 
 .l-homeworks__link:hover {
     transform: scale(1.2);
-    color: #ff9800;
+    color: #E55604;
     transition: color .1s ease-out,
                 transform .2s ease-out;
 }
@@ -48,7 +61,7 @@ body {
   content: '';
   width: 0;
   height: 0;
-  border: 3px solid  #ff9800; 
+  border: 3px solid  #E55604; 
   border-width: 3px 0 0 3px;
   border-radius: 3px;
   position: absolute; 
@@ -73,7 +86,7 @@ body {
   content: '';
   width: 0;
   height: 0;
-  border: 3px solid #ff9800; 
+  border: 3px solid #E55604; 
   border-width: 0 3px 3px 0;
   border-radius: 3px;
   position: absolute; 
