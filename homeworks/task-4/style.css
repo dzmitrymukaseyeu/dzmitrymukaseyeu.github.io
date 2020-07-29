@@ -123,6 +123,10 @@ body {
 		padding: 0 15px;
 	}
 
+	.section1 {
+		overflow: hidden;
+	}
+
 	.inner {
 		flex-basis: 100%;
 	}
