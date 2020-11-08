@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/owfont-regular.css">
+  <title>momentum</title>
+</head>
+<body>
+  <div class="conteiner">
+    <div class="b-main">
+      <button class="b-main__btn" type="button">Change<br>background</button>
+      <div class="b-main__weather">
+        <div class="city" contenteditable="true"></div>
+        <div class="b-weather__temperature"></div>
+        <div class="b-weather__windSpeed"></div>
+        <div class="b-weather__humidity"></div>
+        <i class="b-weather__weather-icon owf"></i>
+        <div class="b-weather__weather-discription"></div>
+        <div class="b-weather__weather-error"></div>
+      </div>
+      <time class="b-main__date"></time>
+      <time class="b-main__time"></time>
+      <h1 class="b-main__title">
+        <span class="b-main__title-greeting"></span>
+        <span class="b-main__title-name" contenteditable="true"></span>
+      </h1>
+      <h2 class="b-main__subtitle">What Is Your Focus For Today?</h2>
+      <h2 class="b-main__focus" contenteditable="true"></h2>
+
+      <div class="b-main__quote">
+        <button type="button" class="b-main__quote-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9 12l-4.463 4.969-4.537-4.969h3c0-4.97 4.03-9 9-9 2.395 0 4.565.942 6.179 2.468l-2.004 2.231c-1.081-1.05-2.553-1.699-4.175-1.699-3.309 0-6 2.691-6 6h3zm10.463-4.969l-4.463 4.969h3c0 3.309-2.691 6-6 6-1.623 0-3.094-.65-4.175-1.699l-2.004 2.231c1.613 1.526 3.784 2.468 6.179 2.468 4.97 0 9-4.03 9-9h3l-4.537-4.969z"/></svg>
+        </button>
+        <blockquote class="b-main__quote-text"></blockquote>
+        <figcaption class="b-main__quote-author"></figcaption>
+
+      </div>
+
+    </div>
+  </div>
+  <script src="js/script.js"></script>
+</body>
+</html>   

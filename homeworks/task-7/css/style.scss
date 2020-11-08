@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
+  
+.conteiner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}  
+
+body {
+  background-color: darkgray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+
+.b-main {
+  padding: 150px 0 20px;
+  position: relative;
+  font-family: 'Fira Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+
+  &__date {
+    font-size: 32px;
+    text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+  }
+
+  &__time {
+    font-size: 96px;
+    font-family: monospace;
+    text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+  }
+
+  &__btn {
+    font-family: 'Fira Mono', monospace;
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: rgba(128,128,128,.5);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    transition: color .2s ease-in;
+    
+    &:disabled{
+      color: transparent;
+      transform: scale(1);
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+
+    &-greeting {
+      display: inline-block;
+    }
+
+    &-name {
+      
+      display: inline-block; 
+      min-width: 80px;
+    }
+  }
+
+  &__subtitle {
+    text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+  }
+
+  &__focus {
+    text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+  }
+
+  &__quote {
+    font-size: 14px;
+    padding: 10px;
+    margin-top: 30px;
+    width: 460px;
+    background-color: rgba(128,128,128,.5);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    height: 160px;
+
+    &-author {
+      margin-top: 5px;
+      text-align: right;
+    }
+
+    &-btn {
+      fill: #ffffff;
+      transition: fill .5s ease, transform .7s ease-in;
+      margin-bottom: 10px;
+
+      &.rotate {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &__weather {
+    width: 195px;
+    font-size: 18px;
+    position: absolute;
+    top :20px; 
+    right: 0;
+    background-color: rgba(128,128,128,.5);
+    backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 10px;
+  }
+}
+
+.b-weather {
+  &__temperature {
+    font-size: 40px;
+  }
+
+  &__humidity {
+    margin-bottom: 5px;
+  }
+}
+
+.weather-icon.owf.owf {
+  font-size: 40px;
+}
+
+@media (max-width: 992px) {
+    .b-main {
+      padding-top: 20px;
+
+      &__date {
+        font-size: 24px;
+      }
+    
+      &__time {
+        font-size: 80px;
+        font-family: monospace;
+      }
+
+      &__title {
+        font-size: 24px;
+      }
+      
+      &__subtitle , &__focus {
+        font-size: 20px;
+      }
+
+      &__weather {
+        position: static;
+        height: 220px;
+        margin-bottom: 20px;
+        top :20px; 
+        right: 0;
+        background-color: rgba(128,128,128,.4);
+        backdrop-filter: blur(4px);
+        border-radius: 20px;
+        padding: 10px;
+      }
+    }
+}
+
+  @media (max-width: 500px) {
+    .b-main {
+      &__date {
+        font-size: 20px;
+      }
+    
+      &__time {
+        font-size: 65px;
+        font-family: monospace;
+      }
+      
+      &__quote {
+        font-size: 14px;
+        width: 400px;
+        height: 170px;
+      }
+
+      &__title {
+        font-size: 20px;
+
+        // &-name {
+        //   min-width: 200px;
+        // }
+      }
+      
+      &__subtitle , &__focus {
+        font-size: 18px;
+      }
+      
+      &__btn {
+        position: static;
+        margin-bottom: 20px;
+      }
+
+      &__weather {
+        font-size: 14px;
+        height: 180px;
+      }
+    }
+  }
+
+
+  @media (max-width: 450px) {
+    .b-main {
+      &__quote {
+        font-size: 14px;
+        width: 300px;
+        height: 200px;
+      }
+    }
+  }

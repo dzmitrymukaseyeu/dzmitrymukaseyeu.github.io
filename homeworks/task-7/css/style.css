@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.conteiner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+body {
+  background-color: darkgray;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+
+.b-main {
+  padding: 150px 0 20px;
+  position: relative;
+  font-family: 'Fira Mono', monospace;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+.b-main__date {
+  font-size: 32px;
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.b-main__time {
+  font-size: 96px;
+  font-family: monospace;
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.b-main__btn {
+  font-family: 'Fira Mono', monospace;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  padding: 10px;
+  color: #ffffff;
+  background-color: rgba(128, 128, 128, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 20px;
+  -webkit-transition: color .2s ease-in;
+  transition: color .2s ease-in;
+}
+
+.b-main__btn:disabled {
+  color: transparent;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.b-main__title {
+  margin-bottom: 20px;
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.b-main__title-greeting {
+  display: inline-block;
+}
+
+.b-main__title-name {
+  display: inline-block;
+  min-width: 80px;
+}
+
+.b-main__subtitle {
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.b-main__focus {
+  text-shadow: black 3px 3px 5px, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+}
+
+.b-main__quote {
+  font-size: 14px;
+  padding: 10px;
+  margin-top: 30px;
+  width: 460px;
+  background-color: rgba(128, 128, 128, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 20px;
+  height: 160px;
+}
+
+.b-main__quote-author {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.b-main__quote-btn {
+  fill: #ffffff;
+  -webkit-transition: fill .5s ease, -webkit-transform .7s ease-in;
+  transition: fill .5s ease, -webkit-transform .7s ease-in;
+  transition: fill .5s ease, transform .7s ease-in;
+  transition: fill .5s ease, transform .7s ease-in, -webkit-transform .7s ease-in;
+  margin-bottom: 10px;
+}
+
+.b-main__quote-btn.rotate {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+.b-main__weather {
+  width: 195px;
+  font-size: 18px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background-color: rgba(128, 128, 128, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.b-weather__temperature {
+  font-size: 40px;
+}
+
+.b-weather__humidity {
+  margin-bottom: 5px;
+}
+
+.weather-icon.owf.owf {
+  font-size: 40px;
+}
+
+@media (max-width: 992px) {
+  .b-main {
+    padding-top: 20px;
+  }
+  .b-main__date {
+    font-size: 24px;
+  }
+  .b-main__time {
+    font-size: 80px;
+    font-family: monospace;
+  }
+  .b-main__title {
+    font-size: 24px;
+  }
+  .b-main__subtitle, .b-main__focus {
+    font-size: 20px;
+  }
+  .b-main__weather {
+    position: static;
+    height: 220px;
+    margin-bottom: 20px;
+    top: 20px;
+    right: 0;
+    background-color: rgba(128, 128, 128, 0.4);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
+    border-radius: 20px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .b-main__date {
+    font-size: 20px;
+  }
+  .b-main__time {
+    font-size: 65px;
+    font-family: monospace;
+  }
+  .b-main__quote {
+    font-size: 14px;
+    width: 400px;
+    height: 170px;
+  }
+  .b-main__title {
+    font-size: 20px;
+  }
+  .b-main__subtitle, .b-main__focus {
+    font-size: 18px;
+  }
+  .b-main__btn {
+    position: static;
+    margin-bottom: 20px;
+  }
+  .b-main__weather {
+    font-size: 14px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 450px) {
+  .b-main__quote {
+    font-size: 14px;
+    width: 300px;
+    height: 200px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
